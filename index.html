@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malay Flashcards</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2b6cb0" />
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 20px; background: #f0f4f8; }
+    h1 { color: #2b6cb0; }
+    #category-select { margin: 20px 0; padding: 10px; font-size: 16px; }
+    #flashcard { width: 300px; height: 200px; margin: 40px auto; display: flex; align-items: center; justify-content: center;
+                 border-radius: 12px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer; font-size: 24px; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; border: none; border-radius: 8px; cursor: pointer; background: #2b6cb0; color: white; }
+    button:hover { background: #234e82; }
+  </style>
+</head>
+<body>
+  <h1>Malay Flashcards</h1>
+  <select id="category-select">
+    <option value="numbers">Numbers</option>
+    <option value="days">Days</option>
+    <option value="food">Food & Drink</option>
+    <option value="intro">Introductions</option>
+    <option value="phrases">Phrases</option>
+    <option value="purchase">Purchase & Bargain</option>
+  </select>
+  <div id="flashcard">Tap to Start</div>
+  <div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <button id="shuffle">Shuffle</button>
+  </div>
+  <script>
+    const flashcards = {
+      numbers: [
+        {ms: "satu", en: "one"},
+        {ms: "dua", en: "two"},
+        {ms: "tiga", en: "three"}
+      ],
+      days: [
+        {ms: "Isnin", en: "Monday"},
+        {ms: "Selasa", en: "Tuesday"},
+        {ms: "Rabu", en: "Wednesday"}
+      ],
+      food: [
+        {ms: "nasi", en: "rice"},
+        {ms: "air", en: "water"},
+        {ms: "teh", en: "tea"}
+      ],
+      intro: [
+        {ms: "Apa khabar?", en: "How are you?"},
+        {ms: "Nama saya...", en: "My name is..."},
+        {ms: "Selamat datang", en: "Welcome"}
+      ],
+      phrases: [
+        {ms: "Terima kasih", en: "Thank you"},
+        {ms: "Sama-sama", en: "You're welcome"},
+        {ms: "Maaf", en: "Sorry"}
+      ],
+      purchase: [
+        {ms: "Berapa harga ini?", en: "How much is this?"},
+        {ms: "Boleh kurang?", en: "Can you lower the price?"},
+        {ms: "Mahal sangat!", en: "Too expensive!"}
+      ]
+    };
+
+    let currentCategory = "numbers";
+    let currentDeck = [...flashcards[currentCategory]];
+    let currentIndex = 0;
+    let showingMalay = true;
+
+    const flashcardDiv = document.getElementById("flashcard");
+    const categorySelect = document.getElementById("category-select");
+
+    function renderCard() {
+      if (currentDeck.length === 0) {
+        flashcardDiv.textContent = "No cards";
+        return;
+      }
+      const card = currentDeck[currentIndex];
+      flashcardDiv.textContent = showingMalay ? card.ms : card.en;
+    }
+
+    flashcardDiv.addEventListener("click", () => {
+      showingMalay = !showingMalay;
+      renderCard();
+    });
+
+    document.getElementById("next").addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % currentDeck.length;
+      showingMalay = true;
+      renderCard();
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + currentDeck.length) % currentDeck.length;
+      showingMalay = true;
+      renderCard();
+    });
+
+    document.getElementById("shuffle").addEventListener("click", () => {
+      currentDeck.sort(() => Math.random() - 0.5);
+      currentIndex = 0;
+      showingMalay = true;
+      renderCard();
+    });
+
+    categorySelect.addEventListener("change", (e) => {
+      currentCategory = e.target.value;
+      currentDeck = [...flashcards[currentCategory]];
+      currentIndex = 0;
+      showingMalay = true;
+      renderCard();
+    });
+
+    renderCard();
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
