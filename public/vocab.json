@@ -1,0 +1,183 @@
+{
+  "numbers": [
+    "satu",
+    "dua",
+    "tiga",
+    "empat",
+    "lima",
+    "enam",
+    "tujuh",
+    "lapan",
+    "sembilan",
+    "sepuluh",
+    "sebelas",
+    "dua belas",
+    "tiga belas",
+    "empat belas",
+    "lima belas",
+    "enam belas",
+    "tujuh belas",
+    "lapan belas",
+    "sembilan belas",
+    "dua puluh"
+  ],
+  "days": [
+    "Isnin",
+    "Selasa",
+    "Rabu",
+    "Khamis",
+    "Jumaat",
+    "Sabtu",
+    "Ahad"
+  ],
+  "time": [
+    "pagi",
+    "tengah hari",
+    "petang",
+    "malam",
+    "sekarang",
+    "esok",
+    "semalam",
+    "awal",
+    "lambat"
+  ],
+  "food": [
+    "nasi lemak",
+    "teh tarik",
+    "kopi",
+    "air",
+    "roti canai",
+    "mee",
+    "ikan",
+    "ayam",
+    "sayur",
+    "buah",
+    "telur",
+    "sambal",
+    "gula",
+    "garam",
+    "ikan bakar"
+  ],
+  "introductions": [
+    "halo",
+    "nama saya",
+    "Saya dari",
+    "Umur saya",
+    "Gembira berjumpa dengan anda",
+    "jumpa lagi"
+  ],
+  "phrases": [
+    "Terima kasih",
+    "Sama-sama",
+    "Maaf",
+    "Tolong",
+    "Saya tidak faham",
+    "Boleh ulang?",
+    "Tidak",
+    "Ya",
+    "Selamat tinggal",
+    "Selamat malam"
+  ],
+  "purchase": [
+    "Berapakah harga ini?",
+    "Terlalu mahal",
+    "Boleh kurangkan sikit?",
+    "Saya mahu beli ini",
+    "Boleh saya bayar?",
+    "Tunai atau kad?"
+  ],
+  "directions": [
+    "di mana?",
+    "kiri",
+    "kanan",
+    "terus",
+    "berhenti",
+    "jalan",
+    "seberang",
+    "dekat",
+    "jauh"
+  ],
+  "transport": [
+    "teksi",
+    "bas",
+    "kereta",
+    "kapal terbang",
+    "stesen",
+    "lapangan terbang",
+    "perhentian bas"
+  ],
+  "emergency": [
+    "tolong!",
+    "polisi",
+    "ambulans",
+    "hospital",
+    "kepulangan",
+    "bantuan",
+    "kehilangan",
+    "kecemasan"
+  ],
+  "family": [
+    "ibu",
+    "bapa",
+    "abang",
+    "kakak",
+    "adik",
+    "anak",
+    "suami",
+    "isteri"
+  ],
+  "questions": [
+    "apa?",
+    "siapa?",
+    "kenapa?",
+    "bagaimana?",
+    "bilakah?",
+    "berapa?"
+  ],
+  "colors": [
+    "merah",
+    "biru",
+    "hijau",
+    "kuning",
+    "hitam",
+    "putih",
+    "oren",
+    "ungu"
+  ],
+  "shopping": [
+    "boleh saya lihat?",
+    "saiz?",
+    "warna?",
+    "resit",
+    "jual",
+    "beli"
+  ],
+  "health": [
+    "saya sakit",
+    "sakit perut",
+    "saya perlukan doktor",
+    "ubat",
+    "alergi"
+  ],
+  "common_verbs": [
+    "pergi",
+    "datang",
+    "makan",
+    "minum",
+    "beli",
+    "lihat",
+    "tahu",
+    "faham",
+    "cakap",
+    "dengar"
+  ],
+  "misc": [
+    "tolong bawa saya ke sini",
+    "tandas",
+    "bilik air",
+    "kunci",
+    "telefon",
+    "WiFi",
+    "kadar pertukaran"
+  ]
+}
